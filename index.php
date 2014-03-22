@@ -1,6 +1,6 @@
 <?php
 
-require_once('theme/template.php');
+require_once('views/template.php');
 
 /*
 	replace array indexes:
