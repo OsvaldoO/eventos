@@ -56,7 +56,7 @@ $ACTION = (
 	($URL == '') ||
 	($URL == 'index.php') ||
 	($URL == 'index.html')
-) ? array('default') : explode('/',html_entity_decode($URL));
+) ? array('inicio') : explode('/',html_entity_decode($URL));
 
 /*
 	I strip out non word characters from $ACTION[0] as the include
@@ -67,7 +67,7 @@ $ACTION = (
 	for example, as root this would make:
 	pages/default.php
 */
-$includeFile = 'pages/'.preg_replace('/[^\w]/','',$ACTION[0]).'.php';
+$includeFile = 'controllers/'.preg_replace('/[^\w]/','',$ACTION[0]).'.php';
 
 if (is_file($includeFile)) {
 
