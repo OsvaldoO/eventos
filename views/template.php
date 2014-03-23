@@ -26,6 +26,32 @@ function template_header($pageTitle = '') {
 	</head>
 	<body id="page1">
 		<div class="extra">
+			<header>
+				<div class="main">
+					<div class="bg-1">
+						<h1><a href="index.html">Eventos ATM</a></h1>
+					</div>
+					<nav>
+						<div class="menu-bg-tail">
+							<div class="menu-bg">
+								<div class="container_12">
+									<div class="grid_12">
+										<ul class="menu">
+											<li class="item"><a class="active" href="<?php echo URL_ROOT?>inicio">Inicio</a></li>
+											<li><a href="<?php echo URL_ROOT?>eventos">Eventos</a></li>
+											<li><a href="<?php echo URL_ROOT?>imagenes">Imagenes</a></li>
+ 											<li class="item-1"><a href="<?php echo URL_ROOT?>videos">Videos</a></li>
+											<li class="last"><a href="<?php echo URL_ROOT?>contacto">Contactanos</a></li>
+										</ul>
+										<div class="clear"></div>
+									</div>
+									<div class="clear"></div>
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</header>
 	<?php
 } // template_header
 

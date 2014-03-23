@@ -26,31 +26,9 @@ function template_home(){
 		</script>		
 		
 	<!--==============================header=================================-->
-			<header>
+<!--==============================content================================-->
+			<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November 21, 2011!</div>
 				<div class="main">
-					<div class="bg-1">
-						<h1><a href="index.html">Eventos ATM</a></h1>
-					</div>
-					<nav>
-						<div class="menu-bg-tail">
-							<div class="menu-bg">
-								<div class="container_12">
-									<div class="grid_12">
-										<ul class="menu">
-											<li class="item"><a class="active" href="<?php echo URL_ROOT?>inicio">Inicio</a></li>
-											<li><a href="<?php echo URL_ROOT?>audio.html">Audio</a></li>
-											<li><a href="<?php echo URL_ROOT?>eventos">Eventos</a></li>
-											<li><a href="<?php echo URL_ROOT?>/gallery.html">Gallery</a></li>
-											<li class="item-1"><a href="tour-dates.html">Tour Dates</a></li>
-											<li class="last"><a href="<?php echo URL_ROOT?>contacto">Contacts</a></li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-									<div class="clear"></div>
-								</div>
-							</div>
-						</div>
-					</nav>
 					<div class="slider-wrapper">
 						<div class="slider">
 							<ul class="items">
@@ -64,11 +42,6 @@ function template_home(){
 							</ul> 
 						</div>
 					</div>
-				</div>
-			</header>
-<!--==============================content================================-->
-			<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November 21, 2011!</div>
-				<div class="main">
 					<div class="bg-2">
 						<div class="content-padding-1">
 							<div class="container_12">

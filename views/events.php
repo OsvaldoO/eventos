@@ -13,33 +13,7 @@ function eventos_index(){
 			}); 
 		</script>	
 <!--==============================header=================================-->
-			<header>
-				<div class="main">
-					<div class="bg-1">
-						<h1><a href="index.html">Rock Band</a></h1>
-					</div>
-					<nav>
-						<div class="menu-bg-tail">
-							<div class="menu-bg">
-								<div class="container_12">
-									<div class="grid_12">
-										<ul class="menu">
-											<li class="item"><a href="index.html">About</a></li>
-											<li><a href="audio.html">Audio</a></li>
-											<li><a class="active" href="video.html">Video</a></li>
-											<li><a href="gallery.html">Gallery</a></li>
-											<li class="item-1"><a href="tour-dates.html">Tour Dates</a></li>
-											<li class="last"><a href="contacts.html">Contacts</a></li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-									<div class="clear"></div>
-								</div>
-							</div>
-						</div>
-					</nav>
-				</div>
-			</header>
+
 <!--==============================content================================-->
 			<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November 21, 2011!</div>
 				<div class="main">
@@ -122,33 +96,7 @@ function eventos_index(){
 function evento_show(){
 ?>
 	<!--==============================header=================================-->
-			<header>
-				<div class="main">
-					<div class="bg-1">
-						<h1><a href="index.html">Rock Band</a></h1>
-					</div>
-					<nav>
-						<div class="menu-bg-tail">
-							<div class="menu-bg">
-								<div class="container_12">
-									<div class="grid_12">
-										<ul class="menu">
-											<li class="item"><a href="<?php echo URL_ROOT?>/inicio">Inicio</a></li>
-											<li><a href="<?php echo URL_ROOT?>/audio.html">Audio</a></li>
-											<li><a href="<?php echo URL_ROOT?>/eventos">Eventos</a></li>
-											<li><a href="gallery.html">Gallery</a></li>
-											<li class="item-1"><a class="active" href="tour-dates.html">Tour Dates</a></li>
-											<li class="last"><a href="<?php echo URL_ROOT?>/contacto">Contacts</a></li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-									<div class="clear"></div>
-								</div>
-							</div>
-						</div>
-					</nav>
-				</div>
-			</header>
+
 <!--==============================content================================-->
 			<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November 21, 2011!</div>
 				<div class="main">
