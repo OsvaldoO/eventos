@@ -1,5 +1,5 @@
 <?php 
-function eventos_index($eventos){
+function eventos_list($eventos){
 ?>
 <!--==============================content================================-->
 <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November 21, 2011!</div>
@@ -38,10 +38,15 @@ function evento_show($evento){
 						<div class="container_12">
 							<div class="wrapper">
 									<?php
-									echo $evento['name'];
-									echo $evento['fecha'];
-									echo $evento['descripcion'];
-									echo $evento['img'];
+									if($evento){
+										echo $evento['name'];
+										echo $evento['fecha'];
+										echo $evento['descripcion'];
+										echo $evento['img'];
+									}
+									else{
+										echo '<h2>Evento no encontrado</h2>';
+									}
 									?>
 						 	</div>
 						</div>
