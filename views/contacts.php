@@ -48,13 +48,6 @@ function template_contact(){
 										</dl>
 									</div>
 								</article>	
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="block"></div>
-			</section>
-		</div>
 		<?php 
 }
 

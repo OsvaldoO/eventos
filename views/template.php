@@ -57,6 +57,14 @@ function template_header($pageTitle = '') {
 
 function template_footer() {
 ?>
+						 	</div>
+						</div>
+					</div>
+				</div>
+				<div class="block"></div>
+			</section>
+		</div>
+<!--==============================footer=================================-->
 		<footer>
 			<div class="main">
 				<div class="footer-bg">
@@ -65,7 +73,7 @@ function template_footer() {
 							<div class="grid_12">
 								<div class="footer-padding">
 									<div class="wrapper">
-										<span class="footer-link"><span>Superior.com &copy; 2011</span> <a rel="nofollow" target="_blank" class="link" href="http://www.templatemonster.com/">Website Template</a> by TemplateMonster.com</span>
+										<span class="footer-link"><span>Atemajac &copy; 2014</span> <a rel="nofollow" target="_blank" class="link" href="http://www.templatemonster.com/">Desarollo web</a> por oosvaldo.leoon@gmail.com</span>
 										<ul class="list-services">
 											<li><a class="tooltips n-1" title="Twitter" href="#"></a></li>
 											<li><a class="tooltips n-2" title="Facebook" href="#"></a></li>

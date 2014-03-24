@@ -4,28 +4,31 @@
 
 	class Eventos{
 
+		private $bd;
+
+		public function __construct(){
+			$this->bd = new Bd();
+		}
+
 		public function index(){
-			$bd = new Bd();
 			$sql = 'SELECT name,fecha,descripcion,img FROM eventos';
-			$eventos = $bd->solicitud($sql);
+			$eventos = $this->bd->solicitud($sql);
 			template_header('Eventos');
 			eventos_list($eventos);
 			template_footer();
 		}
 
 		public function evento($id){
-			$bd = new Bd();
 			$sql = 'SELECT * FROM eventos WHERE id='.$id;
-			$evento = $bd->solicitud($sql)[0];
+			$evento = $this->bd->solicitud($sql)[0];
 			template_header('Eventos');
 			evento_show($evento);
 			template_footer();
 		}
 
 		public function porTipo($tipo){
-			$bd = new Bd();
 			$sql = "SELECT name,fecha,descripcion,img FROM eventos WHERE tipo='".$tipo."'";
-			$eventos = $bd->solicitud($sql);
+			$eventos = $this->bd->solicitud($sql);
 			template_header('Eventos');
 			eventos_list($eventos);
 			template_footer();

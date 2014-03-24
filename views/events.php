@@ -18,13 +18,6 @@ function eventos_list($eventos){
 							}
 							else echo '<h1>No hay Eventos</h1>';
 							 ?>
-						 </div>
-						</div>
-					</div>
-				</div>
-				<div class="block"></div>
-			</section>
-		</div>
 <!--==============================footer=================================-->
 <?php
 }
@@ -48,13 +41,5 @@ function evento_show($evento){
 										echo '<h2>Evento no encontrado</h2>';
 									}
 									?>
-						 	</div>
-						</div>
-					</div>
-				</div>
-				<div class="block"></div>
-			</section>
-		</div>
-<!--==============================footer=================================-->
 <?php 
 }
