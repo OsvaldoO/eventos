@@ -1,6 +1,9 @@
 <?php 
 include ('views/videos.php');
+include('controllers/mysql.php');
+
 class Videos{
+
 	public function index(){
 
 	}
