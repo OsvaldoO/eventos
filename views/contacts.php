@@ -9,25 +9,25 @@ function template_contact(){
 							<div class="wrapper">
 								<article class="grid_8">
 									<div class="padding-grid-1">
-										<h3>Contact <strong>Form</strong></h3>
+										<h3>Formulario de <strong>Contacto</strong></h3>
 										<form id="contact-form" enctype="multipart/form-data" method="post" >
 											<fieldset>
 												<label>
-													<span class="name-input">Name:</span>
+													<span class="name-input">Nombre:</span>
 													<input name="name" value="" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''" />
 												</label>
 												<label>
-													<span class="name-input">Email:</span>	
+													<span class="name-input">Correo:</span>	
 													<input name="name1" value="" onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''" />
 												</label>
 												<label>
-													<span class="name-input">Message:</span>
+													<span class="name-input">Mensaje:</span>
 													<textarea onBlur="if(this.value=='') this.value=''" onFocus="if(this.value =='' ) this.value=''"></textarea>
 												</label>						
 											</fieldset>
 											<div class="link-form">
-												<a class="link link-margin" href="#" onClick="document.getElementById('contact-form').reset()">Clear</a>
-												<a class="link" href="#" onClick="document.getElementById('contact-form').submit()">Send</a>
+												<a class="link link-margin" href="#" onClick="document.getElementById('contact-form').reset()">Limpiar</a>
+												<a class="link" href="#" onClick="document.getElementById('contact-form').submit()">Enviar</a>
 											</div> 
 											<div class="clear"></div>		
 										</form>	
@@ -35,7 +35,7 @@ function template_contact(){
 								</article>
 								<article class="grid_4 alpha">
 									<div class="padding-grid-3">
-										<h3>Contact <strong>Info</strong></h3>
+										<h3><strong>Informacion</strong> de contacto</h3>
 										<div class="wrapper p2">
 											<figure class="style-img-2 fleft">
 												<iframe width="252" height="195" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Brooklyn,+New+York,+NY,+United+States&amp;aq=0&amp;sll=37.0625,-95.677068&amp;sspn=61.282355,146.513672&amp;ie=UTF8&amp;hq=&amp;hnear=Brooklyn,+Kings,+New+York&amp;ll=40.649974,-73.950005&amp;spn=0.01628,0.025663&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
