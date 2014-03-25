@@ -1,95 +1,101 @@
 <?php
 
-function template_header($pageTitle = '') {
-	header('Content-Type: text/html; charset=utf-8');?>
+function template_header($title = '') {
+header('Content-Type: text/html; charset=utf-8');
+$$title = 'page1';
+?>
 
 <!DOCTYPE html>
-	<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Eventos Atemajac de brizuela" />
-	<meta name="author" content="Osvaldo León"/>
-	<meta name="keywords" content="web, eventos, atemajac, brizuela, musica"/>
-	<meta http-equiv="Content-Language" content="es"/>
-	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
-	<link rel="stylesheet" href="<?php echo URL_ROOT?>/css/reset.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="<?php echo URL_ROOT?>/css/style.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="<?php echo URL_ROOT?>/css/grid.css" type="text/css" media="screen">
-	<script src="<?php echo URL_ROOT?>/js/jquery-1.6.3.min.js" type="text/javascript"></script>
-	<script src="<?php echo URL_ROOT?>/js/cufon-yui.js" type="text/javascript"></script>
-	<script src="<?php echo URL_ROOT?>/js/cufon-replace.js" type="text/javascript"></script>
-	<script src="<?php echo URL_ROOT?>/js/Vegur_700.font.js" type="text/javascript"></script>
-	<script src="<?php echo URL_ROOT?>/js/Vegur_400.font.js" type="text/javascript"></script> 
-	<script src="<?php echo URL_ROOT?>/js/FF-cash.js" type="text/javascript"></script> 
-	<script src="<?php echo URL_ROOT?>/js/script.js" type="text/javascript"></script>
-	<script type="text/javascript" src="js/easyTooltip.js"></script>		
-	<title>	<?php echo empty($pageTitle) ? '' : $pageTitle; ?></title>
-	</head>
-	<body id="page1">
-		<div class="extra">
-			<header>
-				<div class="main">
-					<div class="bg-1">
-						<h1><a href="index.html">Eventos ATM</a></h1>
-					</div>
-					<nav>
-						<div class="menu-bg-tail">
-							<div class="menu-bg">
-								<div class="container_12">
-									<div class="grid_12">
-										<ul class="menu">
-											<li class="item"><a class="active" href="<?php echo URL_ROOT?>inicio">Inicio</a></li>
-											<li><a href="<?php echo URL_ROOT?>eventos">Eventos</a></li>
-											<li><a href="<?php echo URL_ROOT?>imagenes">Imagenes</a></li>
- 											<li class="item-1"><a href="<?php echo URL_ROOT?>videos">Videos</a></li>
-											<li class="last"><a href="<?php echo URL_ROOT?>contacto">Contactanos</a></li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-									<div class="clear"></div>
-								</div>
-							</div>
-						</div>
-					</nav>
-				</div>
-			</header>
-	<?php
+<html lang="en">
+<head>
+<title><?php echo $title ?></title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<script src="js/jquery-1.6.js" ></script>
+<script src="js/cufon-yui.js"></script>
+<script src="js/cufon-replace.js"></script>
+<script src="js/NewsGoth_BT_400.font.js"></script>
+<script src="js/NewsGoth_BT_700.font.js"></script>
+<?php if(isset($inicio)) { ?>
+<script src="js/script.js"></script>
+<script src="js/jcarousellite.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.mousewheel.js"></script>
+<?php } ?>
+<script src="js/atooltip.jquery.js"></script>
+</head>
+<body id="<?php echo $$title; ?>">
+<div class="bg1">
+  <div class="main">
+    <!--header -->
+    <header>
+      <nav>
+        <ul id="menu">
+          <li class="<?php echo (isset($inicio))?'active':'';?>"><a href="<?php echo URL_ROOT?>inicio">Inicio</a></li>
+          <li class="<?php echo (isset($eventos))?'active':'';?>"><a href="<?php echo URL_ROOT?>eventos">Eventos</a></li>
+          <li class="<?php echo (isset($galeria))?'active':'';?>"><a href="<?php echo URL_ROOT?>galeria">Galeria</a></li>
+          <li class="<?php echo (isset($invitados))?'active':'';?>"><a href="<?php echo URL_ROOT?>invitados">Invitados</a></li>
+          <li class="<?php echo (isset($noticias))?'active':'';?>"><a href="<?php echo URL_ROOT?>noticias">Noticias</a></li>
+          <li class="<?php echo (isset($contacto))?'active':'';?>"><a href="<?php echo URL_ROOT?>contacto">Contactos</a></li>
+        </ul>
+      </nav>
+      <h1><a href="index.html" id="logo">nightclub feel the rhythm</a></h1>
+    </header>
+      <!--header end-->
+    <div class="box">
+<?php
 } // template_header
 
 function template_footer() {
-?>
-						 	</div>
-						</div>
-					</div>
-				</div>
-				<div class="block"></div>
-			</section>
-		</div>
-<!--==============================footer=================================-->
-		<footer>
-			<div class="main">
-				<div class="footer-bg">
-					<div class="container_12">
-						<div class="wrapper">
-							<div class="grid_12">
-								<div class="footer-padding">
-									<div class="wrapper">
-										<span class="footer-link"><span>Atemajac &copy; 2014</span> <a rel="nofollow" target="_blank" class="link" href="http://www.templatemonster.com/">Desarollo web</a> por oosvaldo.leoon@gmail.com</span>
-										<ul class="list-services">
-											<li><a class="tooltips n-1" title="Twitter" href="#"></a></li>
-											<li><a class="tooltips n-2" title="Facebook" href="#"></a></li>
-											<li class="last"><a class="tooltips n-3" title="Youtube" href="#"></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<script type="text/javascript"> Cufon.now(); </script>
-	</body>
+?> 
+<!--footer -->
+      <footer>
+        <div class="line1">
+          <div class="line2 wrapper">
+            <div class="icons">
+              <h4>Conectate con nosotros</h4>
+              <ul id="icons">
+                <li><a href="#" class="normaltip"><img src="images/icon1.jpg" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="images/icon2.jpg" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="images/icon3.jpg" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="images/icon4.jpg" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="images/icon5.jpg" alt=""></a></li>
+              </ul>
+              <!-- {%FOOTER_LINK} -->
+            </div>
+            <div class="info">
+              <h4>About Us</h4>
+              <ul>
+                <li><a href="#">Club Info</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">DJ Sets</a></li>
+                <li><a href="#">News</a></li>
+              </ul>
+            </div>
+            <div class="info">
+              <h4>Join In</h4>
+              <ul>
+                <li><a href="#">Sign In</a></li>
+                <li><a href="#">Forums</a></li>
+                <li><a href="#">Promotions</a></li>
+              </ul>
+            </div>
+            <div class="phone">
+              <h4>Order Tickets</h4>
+              <p>Free Phone<span>8-800-123-NIGHT</span></p>
+            </div>
+          </div>
+          Atemajac de Brizuela 2014 &copy; | Web Name </a></div>
+      </footer>
+      <!--footer end-->
+    </div>
+  </div>
+</div>
+<div align=center>Desarollado por <a href='https://www.facebook.com/OsvaldOoLeOon'>Oosvaldo LeoOn</a></div></body>
 </html>
+
 <?php
 
 	die(); 

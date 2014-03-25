@@ -1,1 +1,5 @@
-.bg-2 {behavior: url(js/PIE.htc); position:relative;}
+/* -----------------for pie------------------- */
+
+#ContactForm .button {
+	behavior: url("../js/PIE.htc");
+}

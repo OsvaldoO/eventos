@@ -1,149 +1,49 @@
 <?php
 function template_home(){
-	?>
-	<link rel="stylesheet" href="<?php echo URL_ROOT?>/css/prettyPhoto.css" type="text/css" media="screen">   
-	<script type="text/javascript" src="<?php echo URL_ROOT?>js/easyTooltip.js"></script>
-		<script src="<?php echo URL_ROOT?>/js/jquery.easing.1.3.js" type="text/javascript"></script>
-		<script src="<?php echo URL_ROOT?>/js/hover-image.js" type="text/javascript"></script>
-		<script src="<?php echo URL_ROOT?>/js/jquery.prettyPhoto.js" type="text/javascript"></script>
-		<script src="<?php echo URL_ROOT?>/js/jquery.easing.1.3.js" type="text/javascript"></script>
-		<script type="text/javascript" src="<?php echo URL_ROOT?>/js/tms-0.3.js"></script>
-		<script type="text/javascript" src="<?php echo URL_ROOT?>/js/tms_presets.js"></script>
-		<script type="text/javascript">
-			$(window).load(function(){
-				$('.slider')._TMS({
-					duration:800,
-					easing:'easeOutQuad',
-					preset:'diagonalFade',
-					pagination:false,
-					slideshow:6000,
-					banners:false,
-					waitBannerAnimation:false,
-					pauseOnHover:true
-				});
-				$("a[data-gal^='prettyVideo']").prettyPhoto({animation_speed:'normal',theme:'facebook',slideshow:false, autoplay_slideshow: false});
-			}); 
-		</script>		
-		
-	<!--==============================header=================================-->
-<!--==============================content================================-->
-			<section id="content">
-				<div class="main">
-					<div class="slider-wrapper">
-						<div class="slider">
-							<ul class="items">
-								<li><img src="<?php echo URL_ROOT?>/images/slider-img1.jpg" alt="" /></li>
-								<li>
-									<img src="<?php echo URL_ROOT?>/images/slider-img2.jpg" alt="" />
-								</li>
-								<li>
-									<img src="<?php echo URL_ROOT?>/images/slider-img3.jpg" alt="" />
-								</li>
-							</ul> 
-						</div>
-					</div>
-					<div class="bg-2">
-						<div class="content-padding-1">
-							<div class="container_12">
-								<div class="wrapper">
-									<article class="grid_4">
-										<div class="padding-grid-1">
-											<h3 class="letter">Ultimos <strong>Eventos</strong></h3>
-											<div class="wrapper img-indent-bot1">
-												<time class="time time-stule-1" datetime="2011-11-09"> <strong class="text-1">09</strong><strong class="text-2">nov</strong></time>
-												<div class="extra-wrap">
-													<div class="indent-top">
-														Rock Band is one of <a class="link" target="_blank" href="http://blog.templatemonster.com/free-website-templates/">free website templates</a> created by Template Monster team.
-													</div>
-												</div>
-											</div>
-											<div class="wrapper img-indent-bot1">
-												<time class="time time-stule-1" datetime="2011-11-07"> <strong class="text-1">07</strong><strong class="text-2">nov</strong></time>
-												<div class="extra-wrap">
-													<div class="indent-top">
-														This <a class="link" target="_blank" href="http://blog.templatemonster.com/2011/11/21/free-website-template-jquery-gallery-music/ ">Rock Band Template</a> goes with two packages – with PSD source files and without them.
-													</div>
-												</div>
-											</div>
-											<div class="wrapper">
-												<time class="time time-stule-1" datetime="2011-11-02"> <strong class="text-1">02</strong><strong class="text-2">nov</strong></time>
-												<div class="extra-wrap">
-													<div class="indent-top">
-														PSD source files are available for free for the registered members <br />of Templates.com.
-													</div>
-												</div>
-											</div>
-										</div>
-									</article>
-									<article class="grid_4 alpha">
-										<div class="padding-grid-1">
-											<h3>Proximos <strong>Eventos</strong></h3>
-											<div class="wrapper img-indent-bot2">
-												<time class="time time-stule-2" datetime="2011-11-09"> <strong class="text-3">09</strong><strong class="text-4">nov</strong></time>
-												<div class="extra-wrap">
-													<h4 class="indent-top"><a href="#">New York</a></h4>
-													Lorem ipsum dolor consctetur 
-												</div>
-											</div>
-											<div class="wrapper img-indent-bot2">
-												<time class="time time-stule-2" datetime="2011-11-05"> <strong class="text-3">05</strong><strong class="text-4">nov</strong></time>
-												<div class="extra-wrap">
-													<h4 class="indent-top"><a href="#">Los Angeles</a></h4>
-													Adipisicing elitdo esmod tempor
-												</div>
-											</div>
-											<div class="wrapper">
-												<time class="time time-stule-2" datetime="2011-11-01"> <strong class="text-3">01</strong><strong class="text-4">nov</strong></time>
-												<div class="extra-wrap">
-													<h4 class="indent-top"><a href="#">San Diego</a></h4>
-													Lorem ipsum dolor consctetur 
-												</div>
-											</div>
-										</div>
-									</article>
-									<article class="grid_4 alpha">
-										<div class="padding-grid-2">
-											<h3 class="letter">Ultimo <strong>Video</strong></h3>
-											<div class="wrapper">
-												<figure class="style-img-2 fleft"><a class="lightbox-image" href="video/video_AS3.swf?width=495&amp;height=275&amp;fileVideo=intro06.flv" data-gal="prettyVideo[prettyVideo]"><img src="images/page1-img2.jpg"  alt=""></a></figure>
-											</div>
-										</div>
-									</article>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="content-padding-2">
-						<div class="container_12">
-							<div class="wrapper">
-								<article class="grid_4">
-									<div class="padding-grid-1">
-										<h3>Posibles <strong>Eventos</strong></h3>
-										<div class="wrapper img-indent-bot1">
-											<time class="time time-stule-3" datetime="2011-11-09"> <strong class="text-5">09</strong><strong class="text-6">nov</strong></time>
-											<div class="extra-wrap">
-												<div class="indent-top">
-													Lorem ipsum dolor consctetur adipisicing elitdo eusmod tempor incididunt ut labore.
-												</div>
-											</div>
-										</div>
-										<div class="wrapper">
-											<time class="time time-stule-3" datetime="2011-11-03"> <strong class="text-5">03</strong><strong class="text-6">nov</strong></time>
-											<div class="extra-wrap">
-												<div class="indent-top">
-													Lorem ipsum dolor consctetur adipisicing elitdo eusmod tempor incididunt ut labore.
-												</div>
-											</div>
-										</div>
-									</div>
-								</article>
-								<article class="grid_8 alpha">
-									<div class="padding-grid-2">
-										<h3 class="letter prev-indent-bot1">Sobre <strong>Nosotros</strong></h3>
-										<h6>Sed ut perspiciatis unde omnis</h6>
-										Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas aspernatur.
-									</div>
-								</article>
+?>
+	<!--content -->
+      <article id="content">
+        <div class="wrapper pad_bot1">
+          <section class="col1">
+            <h2 id="welcom">Sobre Nosotros!</h2>
+            <p class="color1">Informacion de la web, Informacion de la web, Informacion de la web, Informacion de la web ,Informacion de la web ,Informacion de la web ,Informacion de la web ,Informacion de la web</p>
+            <p class="pad_bot1">Informacion de la web, Informacion de la web, Informacion de la web, Informacion de la web,Informacion de la web, Informacion de la web, Informacion de la web,Informacion de la web,Informacion de la web</p>
+           </section>
+          <section class="col1 pad_left1">
+            <h2>Ultimos Eventos</h2>
+            <div id="gallery1">
+              <ul>
+                <li> <span class="dropcap_1">30<span>august</span></span>
+                  <p><span class="color1">Lorem ipsum dolor sit amet</span><br>
+                    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
+                    <a href="#" class="link1">View Details</a></p>
+                </li>
+                <li> <span class="dropcap_1">26<span>august</span></span>
+                  <p><span class="color1">Ut enim ad minim veniam nostrud</span><br>
+                    Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
+                    <a href="#" class="link1">View Details</a></p>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="next"></a> <a href="#" class="prev"></a> </section>
+        </div>
+        <div class="wrapper">
+          <h2>Next Party</h2>
+          <div class="wrapper">
+            <figure class="left marg_right1"><a href="#"><img src="images/banner1.jpg" alt=""></a></figure>
+            <h3>Best RNB from Europe</h3>
+            <p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo:</p>
+            <ul class="list1 pad_bot1">
+              <li><a href="#">Ut enim ad minima veniam, quis nostrum exercitationem ullam</a></li>
+              <li><a href="#">Quis autem vel eum iure reprehenderit qui in voluptate</a></li>
+              <li><a href="#">Velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum</a></li>
+              <li><a href="#">Fugiat quo voluptas nulla pariatur lorem ipsum dolor sit amet</a></li>
+            </ul>
+            <p>Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate voluptatem quia voluptas sit aspernatur.</p>
+          </div>
+        </div>
+      </article>
+      <!--content end-->
 <?php 
 }
 
