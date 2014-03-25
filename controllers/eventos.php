@@ -33,15 +33,27 @@
 			eventos_list($eventos);
 			template_footer();
 		}
+
+		public function pendientes(){
+			$sql = "SELECT name,fecha,descripcion,img FROM eventos WHERE fecha > NOW()";
+			$eventos = $this->bd->solicitud($sql);
+			template_header('Eventos');
+			eventos_list($eventos);
+			template_footer();
+		}
 	}
 
 $evento = new Eventos();
 if(count($ACTION) > 1){
-	if(is_numeric($ACTION[1])){
-		$evento->evento($ACTION[1]);
+	$metodo = $ACTION[1];
+	if(is_numeric($metodo)){
+		$evento->evento($metodo);
+	}
+	else if($metodo == 'proximos'){
+		$evento->pendientes();
 	}
 	else{
-		$evento->porTipo($ACTION[1]);
+		$evento->porTipo($metodo);
 	}
 }
 else{ 

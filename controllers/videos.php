@@ -26,7 +26,11 @@ class Videos{
 	}
 
 	public function porTipo($tipo){
-		
+		$sql = "SELECT * FROM videos as v, eventos as e WHERE v.evento_id = e.id AND e.tipo ='".$tipo."'";
+		$videos = $this->bd->solicitud($sql);
+		template_header('Videos');
+		video_list($videos);
+		template_footer();
 	}
 
 }
@@ -37,7 +41,7 @@ if(count($ACTION) > 1){
 		$video->evento($ACTION[1]);
 	}
 	else{
-		$video->tipo($ACTION[1]);
+		$video->porTipo($ACTION[1]);
 	}
 }
 else{ 

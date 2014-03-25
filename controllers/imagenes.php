@@ -26,7 +26,11 @@ class Imagenes{
 	}
 
 	public function porTipo($tipo){
-		
+		$sql = "SELECT * FROM imagenes as i, eventos as e WHERE i.evento_id = e.id AND e.tipo ='".$tipo."'";
+		$imagenes = $this->bd->solicitud($sql);
+		template_header('imagenes');
+		imagen_list($imagenes);
+		template_footer();
 	}
 
 }
@@ -37,7 +41,7 @@ if(count($ACTION) > 1){
 		$imagen->evento($ACTION[1]);
 	}
 	else{
-		$imagen->tipo($ACTION[1]);
+		$imagen->porTipo($ACTION[1]);
 	}
 }
 else{ 

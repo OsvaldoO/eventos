@@ -27,7 +27,7 @@ function template_home(){
 		
 	<!--==============================header=================================-->
 <!--==============================content================================-->
-			<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November 21, 2011!</div>
+			<section id="content">
 				<div class="main">
 					<div class="slider-wrapper">
 						<div class="slider">
@@ -48,7 +48,7 @@ function template_home(){
 								<div class="wrapper">
 									<article class="grid_4">
 										<div class="padding-grid-1">
-											<h3 class="letter">Latest <strong>News</strong></h3>
+											<h3 class="letter">Ultimos <strong>Eventos</strong></h3>
 											<div class="wrapper img-indent-bot1">
 												<time class="time time-stule-1" datetime="2011-11-09"> <strong class="text-1">09</strong><strong class="text-2">nov</strong></time>
 												<div class="extra-wrap">
@@ -77,7 +77,7 @@ function template_home(){
 									</article>
 									<article class="grid_4 alpha">
 										<div class="padding-grid-1">
-											<h3>Tour <strong>Dates</strong></h3>
+											<h3>Proximos <strong>Eventos</strong></h3>
 											<div class="wrapper img-indent-bot2">
 												<time class="time time-stule-2" datetime="2011-11-09"> <strong class="text-3">09</strong><strong class="text-4">nov</strong></time>
 												<div class="extra-wrap">
@@ -103,9 +103,9 @@ function template_home(){
 									</article>
 									<article class="grid_4 alpha">
 										<div class="padding-grid-2">
-											<h3 class="letter">In Stores <strong>Now!</strong></h3>
+											<h3 class="letter">Ultimo <strong>Video</strong></h3>
 											<div class="wrapper">
-												<figure class="style-img fleft"><a href="#"><img src="images/page1-img1.jpg"  alt=""></a></figure>
+												<figure class="style-img-2 fleft"><a class="lightbox-image" href="video/video_AS3.swf?width=495&amp;height=275&amp;fileVideo=intro06.flv" data-gal="prettyVideo[prettyVideo]"><img src="images/page1-img2.jpg"  alt=""></a></figure>
 											</div>
 										</div>
 									</article>
@@ -118,7 +118,7 @@ function template_home(){
 							<div class="wrapper">
 								<article class="grid_4">
 									<div class="padding-grid-1">
-										<h3>Upcoming <strong>Events</strong></h3>
+										<h3>Posibles <strong>Eventos</strong></h3>
 										<div class="wrapper img-indent-bot1">
 											<time class="time time-stule-3" datetime="2011-11-09"> <strong class="text-5">09</strong><strong class="text-6">nov</strong></time>
 											<div class="extra-wrap">
@@ -137,18 +137,9 @@ function template_home(){
 										</div>
 									</div>
 								</article>
-								<article class="grid_4 alpha">
+								<article class="grid_8 alpha">
 									<div class="padding-grid-2">
-										<h3 class="letter">Latest <strong>Video</strong></h3>
-										
-										<div class="wrapper">
-											<figure class="style-img-2 fleft"><a class="lightbox-image" href="video/video_AS3.swf?width=495&amp;height=275&amp;fileVideo=intro06.flv" data-gal="prettyVideo[prettyVideo]"><img src="images/page1-img2.jpg"  alt=""></a></figure>
-										</div>
-									</div>
-								</article>
-								<article class="grid_4 alpha">
-									<div class="padding-grid-2">
-										<h3 class="letter prev-indent-bot1">Shortly <strong>About</strong></h3>
+										<h3 class="letter prev-indent-bot1">Sobre <strong>Nosotros</strong></h3>
 										<h6>Sed ut perspiciatis unde omnis</h6>
 										Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas aspernatur.
 									</div>
