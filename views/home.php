@@ -1,5 +1,6 @@
 <?php
-function template_home(){
+function template_home($ultimos){
+	$mes = array(1 => 'Enero' ,2 => 'Febrero' ,3 => 'Marzo' ,4 => 'Abril' ,5 => 'Mayo' ,6 => 'Junio' ,7 => 'Julio' ,8 => 'Agosto' ,9 => 'Septiembre' ,10 => 'Octubre' ,11 => 'Noviembre' ,12 => 'Diciembre');
 ?>
 	<!--content -->
       <article id="content">
@@ -13,16 +14,14 @@ function template_home(){
             <h2>Ultimos Eventos</h2>
             <div id="gallery1">
               <ul>
-                <li> <span class="dropcap_1">30<span>august</span></span>
-                  <p><span class="color1">Lorem ipsum dolor sit amet</span><br>
-                    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-                    <a href="#" class="link1">View Details</a></p>
-                </li>
-                <li> <span class="dropcap_1">26<span>august</span></span>
-                  <p><span class="color1">Ut enim ad minim veniam nostrud</span><br>
-                    Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <br>
-                    <a href="#" class="link1">View Details</a></p>
-                </li>
+              <?php 
+              	foreach ($ultimos as $evento) {
+              		echo '<li> <span class="dropcap_1">'.$evento['dia'].'<span>'.$mes[$evento['mes']].'</span></span>';
+                  	echo '<p><span class="color1">'.$evento['name'].'</span><br>';
+                    echo '<span>'.$evento['descripcion'].' illl lllllllllllllll lllllncididunt ut labore .</span></br>';
+                    echo '<a href="#" class="link1">Ver detalles</a></p></li>';
+              	}
+              	?>
               </ul>
             </div>
             <a href="#" class="next"></a> <a href="#" class="prev"></a> </section>
