@@ -38,7 +38,7 @@ $$title = 'page1';
           <li class="<?php echo (isset($galeria))?'active':'';?>"><a href="<?php echo URL_ROOT?>galeria">Galeria</a></li>
           <li class="<?php echo (isset($invitados))?'active':'';?>"><a href="<?php echo URL_ROOT?>invitados">Invitados</a></li>
           <li class="<?php echo (isset($noticias))?'active':'';?>"><a href="<?php echo URL_ROOT?>noticias">Noticias</a></li>
-          <li class="<?php echo (isset($contacto))?'active':'';?>"><a href="<?php echo URL_ROOT?>contacto">Contactos</a></li>
+          <li class="<?php echo (isset($contacto))?'active':'';?>"><a href="<?php echo URL_ROOT?>contacto">Contacto</a></li>
         </ul>
       </nav>
       <h1><a href="index.html" id="logo">nightclub feel the rhythm</a></h1>
@@ -52,47 +52,21 @@ function template_footer() {
 ?> 
 <!--footer -->
       <footer>
-        <div class="line1">
-          <div class="line2 wrapper">
-            <div class="icons">
-              <h4>Buscanos</h4>
-              <ul id="icons">
-                <li><a href="#" class="normaltip"><img src="images/face.png" alt=""></a></li>
-                <li><a href="#" class="normaltip"><img src="images/twi.png" alt=""></a></li>
-                <li><a href="#" class="normaltip"><img src="images/yout.png" alt=""></a></li>
-
-              </ul>
-              <!-- {%FOOTER_LINK} -->
-            </div>
-            <div class="info">
-              <h4>About Us</h4>
-              <ul>
-                <li><a href="#">Club Info</a></li>
-                <li><a href="#">Music</a></li>
-                <li><a href="#">DJ Sets</a></li>
-                <li><a href="#">News</a></li>
-              </ul>
-            </div>
-            <div class="info">
-              <h4>Join In</h4>
-              <ul>
-                <li><a href="#">Sign In</a></li>
-                <li><a href="#">Forums</a></li>
-                <li><a href="#">Promotions</a></li>
-              </ul>
-            </div>
-            <div class="phone">
-              <h4>Order Tickets</h4>
-              <p>Free Phone<span>8-800-123-NIGHT</span></p>
-            </div>
+          <div class="left"> <address>Nombre completo encrgado</br>
+          		3333333333 | micorreo@gmail.com</address></br>
           </div>
-          Atemajac de Brizuela 2014 &copy; | Web Name </a></div>
+         <ul class="right" id="icons">
+                <li><a href="#" class="normaltip"><img src="images/face.png" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="images/yout.png" alt=""></a></li>
+          </ul>
+                    		<small class="center">Desarollo web <a class="link1" href='https://www.facebook.com/OsvaldOoLeOon'>Oosvaldo LeoOn</a></small>
+
       </footer>
       <!--footer end-->
     </div>
   </div>
 </div>
-<div align=center>Desarollado por <a href='https://www.facebook.com/OsvaldOoLeOon'>Oosvaldo LeoOn</a></div></body>
+</body>
 </html>
 
 <?php

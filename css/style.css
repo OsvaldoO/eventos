@@ -17,6 +17,11 @@ mark, rp, rt, ruby, summary, time {
 	width:100%;
 	overflow:hidden;
 }
+.center{
+	text-align: center;
+	clear: both;
+	display: block;
+}
 /* Global properties ======================================================== */
 
 body {
@@ -293,8 +298,10 @@ header {
 /* ============================= footer ====================== */
 
 footer {
-	height:172px;
+	height:70px;
 	color:#fff;
+	padding-top:20px;
+	padding-right:40px;
 }
 footer a {
 	color:#fff;
@@ -312,7 +319,7 @@ footer a:hover {
 	height:100%
 }
 .icons {
-	float:left;
+	float:right;
 	width:230px;
 	padding-right:70px
 }
@@ -355,6 +362,14 @@ footer a:hover {
 	position:relative;
 	margin:0;
 	padding:0;
+}
+
+small {
+	font-size: .8em;
+}
+
+address{
+	padding-top: 10px;
 }
 /* ============================= forms ============================= */
 
