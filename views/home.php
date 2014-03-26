@@ -18,8 +18,8 @@ function template_home($ultimos){
               	foreach ($ultimos as $evento) {
               		echo '<li> <span class="dropcap_1">'.$evento['dia'].'<span>'.$mes[$evento['mes']].'</span></span>';
                   	echo '<p><span class="color1">'.$evento['name'].'</span><br>';
-                    echo '<span>'.$evento['descripcion'].' illl lllllllllllllll lllllncididunt ut labore .</span></br>';
-                    echo '<a href="#" class="link1">Ver detalles</a></p></li>';
+                    echo $evento['descripcion'].'</br>';
+                    echo '<a href="#" class="link1 right">Ver detalles</a></p></li>';
               	}
               	?>
               </ul>

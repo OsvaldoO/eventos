@@ -232,12 +232,10 @@ header {
 	margin-top:-11px
 }
 #gallery1 {
-	height: 225px !important;
+	height: 200px !important;
 	margin-left:-7px;
 }
-#gallery1 li {
-	overflow:inherit !important;
-}
+
 .prev, .next {
 	float:right;
 	background:url(../images/markers.jpg) 0 0 no-repeat;

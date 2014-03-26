@@ -55,13 +55,12 @@ function template_footer() {
         <div class="line1">
           <div class="line2 wrapper">
             <div class="icons">
-              <h4>Conectate con nosotros</h4>
+              <h4>Buscanos</h4>
               <ul id="icons">
-                <li><a href="#" class="normaltip"><img src="images/icon1.jpg" alt=""></a></li>
-                <li><a href="#" class="normaltip"><img src="images/icon2.jpg" alt=""></a></li>
-                <li><a href="#" class="normaltip"><img src="images/icon3.jpg" alt=""></a></li>
-                <li><a href="#" class="normaltip"><img src="images/icon4.jpg" alt=""></a></li>
-                <li><a href="#" class="normaltip"><img src="images/icon5.jpg" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="images/face.png" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="images/twi.png" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="images/yout.png" alt=""></a></li>
+
               </ul>
               <!-- {%FOOTER_LINK} -->
             </div>
