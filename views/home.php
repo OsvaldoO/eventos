@@ -1,5 +1,5 @@
 <?php
-function template_home($ultimos){
+function template_home($ultimos, $event, $invitados){
 	$mes = array(1 => 'Enero' ,2 => 'Febrero' ,3 => 'Marzo' ,4 => 'Abril' ,5 => 'Mayo' ,6 => 'Junio' ,7 => 'Julio' ,8 => 'Agosto' ,9 => 'Septiembre' ,10 => 'Octubre' ,11 => 'Noviembre' ,12 => 'Diciembre');
 ?>
 	<!--content -->
@@ -27,18 +27,17 @@ function template_home($ultimos){
             <a href="#" class="next"></a> <a href="#" class="prev"></a> </section>
         </div>
         <div class="wrapper">
-          <h2>Next Party</h2>
+          <h2>Proximo Evento</h2>
           <div class="wrapper">
-            <figure class="left marg_right1"><a href="#"><img src="images/banner1.jpg" alt=""></a></figure>
-            <h3>Best RNB from Europe</h3>
-            <p class="pad_bot1">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo:</p>
+            <figure class="left marg_right1"><a href="#"><img src="images/<?php echo $event['img'];?>" alt=""></a></figure>
+            <h3><?php echo $event['name']; ?></h3>
+            <p class="pad_bot1"><?php echo $event['descripcion']; ?></p>
             <ul class="list1 pad_bot1">
-              <li><a href="#">Ut enim ad minima veniam, quis nostrum exercitationem ullam</a></li>
-              <li><a href="#">Quis autem vel eum iure reprehenderit qui in voluptate</a></li>
-              <li><a href="#">Velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum</a></li>
-              <li><a href="#">Fugiat quo voluptas nulla pariatur lorem ipsum dolor sit amet</a></li>
+            	<?php foreach ($invitados as $invitado) {
+            		echo '<li><a href="#"></a>'.$invitado['nombre'].'</li>';
+            	} echo $event['name']; ?>
             </ul>
-            <p>Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate voluptatem quia voluptas sit aspernatur.</p>
+            <p> <?php echo $event['prev'];?> </p>
           </div>
         </div>
       </article>

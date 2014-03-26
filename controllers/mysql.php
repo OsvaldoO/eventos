@@ -9,7 +9,9 @@ class Bd{
 				$i = 0;
 				while ($record = mysql_fetch_array($res)) {
 					foreach ($record as $key => $value) {
-						$eventos[$i][$key] = $record[$key];
+						if(!is_numeric($key)){
+							$eventos[$i][$key] = $record[$key];
+						}
 					}
 					$i++;
 				}

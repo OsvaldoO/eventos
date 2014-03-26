@@ -14,14 +14,13 @@
 		function index(){
 			$sql = "SELECT name,MONTH(fecha) as mes,DAY(fecha) as dia,descripcion FROM eventos WHERE fecha < NOW()";
 			$eventos = $this->bd->solicitud($sql);
-			/*foreach ($eventos as $key => $evento) {
-				$ultimos[$key]['name'] = $evento['name'];
-				$ultimos[$key]['dia'] = $evento['dia'];
-				$ultimos[$key]['mes'] = $evento['mes'];
-				$ultimos[$key]['desc'] = $evento['desc'];
-			}*/
+			$sql = "SELECT id, name, MONTH(fecha) as mes, DAY(fecha) as dia, descripcion, taquilla, prev, img FROM eventos WHERE fecha > NOW() ORDER BY fecha ASC LIMIT 1";
+			$event = $this->bd->solicitud($sql)[0];
+			$sql = "SELECT distinct i.nombre FROM invitados i INNER JOIN evento_invitado ei ON ( ei.id_evento = ".$event['id']." )";
+			$invitados = $this->bd->solicitud($sql);
+			var_dump($invitados);
 			template_header('inicio');
-			template_home($eventos);
+			template_home($eventos, $event, $invitados);
 			template_footer();
 		}
 	}
