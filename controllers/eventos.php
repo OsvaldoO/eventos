@@ -4,45 +4,39 @@
 
 	class Eventos{
 
-		public function index(){
-			template_header('eventos');
+		public function index(){		
 			eventos_list(Evento::getAll());
-			template_footer();
 		}
 
 		public function evento($id){
-			template_header('eventos');
 			evento_show(new Evento($id));
-			template_footer();
 		}
 
 		public function porTipo($tipo){
-			template_header('eventos');
 			eventos_list(Evento::getType($tipo));
-			template_footer();
 		}
 
 		public function pendientes(){
-			template_header('Eventos');
 			eventos_list(Evento::getUncom());
-			template_footer();
 		}
 	}
 
-$evento = new Eventos();
+$eventos = new Eventos();
+template_header('eventos');
 if(count($ACTION) > 1){
 	$metodo = $ACTION[1];
 	if(is_numeric($metodo)){
-		$evento->evento($metodo);
+		$eventos->evento($metodo);
 	}
 	else if($metodo == 'proximos'){
-		$evento->pendientes();
+		$eventos->pendientes();
 	}
 	else{
-		$evento->porTipo($metodo);
+		$eventos->porTipo($metodo);
 	}
 }
 else{ 
-	$evento->index();
+	$eventos->index();
 }
+template_footer();
 ?>

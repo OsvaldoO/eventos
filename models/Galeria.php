@@ -2,7 +2,7 @@
 
 include_once('models/mysql.php');
 
-class Imagen{
+class Galeria{
 
 	static function getLast(){
 		$sql = "SELECT * FROM imagenes WHERE fecha < NOW() ORDER BY fecha LIMIT 1";
