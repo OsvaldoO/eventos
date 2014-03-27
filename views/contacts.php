@@ -11,19 +11,19 @@ function template_contact(){
       	</div>
       <form id="ContactForm" action="#">
         <div>
-          <div class="wrapper"> <span>Nombre:</span>
+          <div class="wrapper"> <label>Nombre:</label>
             <input type="text" class="input" >
           </div>
-          <div class="wrapper"> <span>Correo:</span>
+          <div class="wrapper"> <label>Correo:</label>
             <input type="text" class="input" >
           </div>
-          <div class="wrapper"> <span>Asunto:</span>
+          <div class="wrapper"> <label>Asunto:</label>
             <input type="text" class="input" >
           </div>
-          <div class="textarea_box"> <span>Mensaje:</span>
+          <div class="textarea_box"> <label>Mensaje:</label>
             <textarea name="textarea" cols="1" rows="1"></textarea>
           </div>
-          <a href="#" class="button">enviar</a> <a href="#" class="button">limpiar</a> </div>
+          <div class="buttons"><button class="button">enviar</button> <button class="button">limpiar</button> </div></div>
       </form>
     </div>
   </article>

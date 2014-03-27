@@ -38,7 +38,7 @@ function eventos_list($eventos){
 <?php
 }
 
-function evento_show($evento){
+function eventos_show($evento){
 ?>
 <!--==============================content================================-->
 									<?php
@@ -53,4 +53,45 @@ function evento_show($evento){
 									}
 									?>
 <?php 
+}
+
+function eventos_new(){
+?>
+	<article id="content">
+    <div class="wrapper">
+    	<div class="col3">
+        	<h2>Nuevo Evento</h2>
+      	</div>
+      <form id="ContactForm" method="post" action="<?php echo URL_ROOT?>eventos/nuevo">
+        <div>
+          <div class="wrapper"> <label for="name">Nombre:</label>
+            <input name="name" id="name" type="text" class="i_medio" >
+          </div>
+          <div class="wrapper"> <label for="fecha">Fecha:</label>
+            <input id="fecha" name="fecha" type="date" value="<?php echo date('Y'); ?>-01-01" >
+          </div>
+          <div class="wrapper"> <label for="hini">Inicia:</label>
+            <input id="hini" name="hini" type="time" value="00:00" >
+            <label for="hfin">Finaliza:</label>
+            <input id="hfin" name="hfin" type="time" value="00:00">
+          </div>
+          <div class="wrapper"> <label for="lugar">Lugar:</label>
+            <input name="lugar" id="lugar" type="text" class="i_medio" >
+          </div>
+          <div class="textarea_box"> <label for="invitados">Invitados:</label>
+            <textarea name="invitados" id="invitados" cols="1" rows="1"></textarea>
+          </div>
+          <div class="wrapper"> <label for="prev">Preventa:</label>
+            <input id="prev" name="prev" type="text">
+            <label for="taq">Taquilla:</label>
+            <input id="taq" name="taq" type="text">
+          </div>
+          <div class="textarea_box"> <label for="descript">Detalles:</label>
+            <textarea name="descrip" id="descript" cols="1" rows="1"></textarea>
+          </div>
+          <div class="buttons"> <button type="submit" class="button">enviar</button> <button type="reset" class="button">limpiar</button> </div></div>
+      </form>
+    </div>
+  </article>
+<?php
 }

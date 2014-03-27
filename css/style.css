@@ -382,19 +382,21 @@ address{
 	min-height:35px;
 }
 #ContactForm .textarea_box {
-	min-height:264px;
+
 }
-#ContactForm span {
-	float:left;
-	width:120px;
+label{
+	display: inline-block;
+	width:10%;
 	line-height:30px;
+}
+.buttons{
+	margin-right:30px;
 }
 #ContactForm .button {
 	margin-right:5px;
 	float:right;
 	font-size:25px;
 	color:#7532a9;
-	text-decoration:none;
 	letter-spacing:-2px;
 	padding:0 13px;
 	line-height:26px;
@@ -413,21 +415,34 @@ address{
 	-moz-box-shadow: 0 0 6px rgba(152, 103, 190, .5);
 	-webkit-box-shadow:  0 0 6px rgba(152, 103, 190, .5)
 }
-#ContactForm .input {
-	margin:0;
-	width:360px;
+input{
 	height:16px;
-	background:#fff;
 	padding:7px 10px;
 	color:#474747;
 	font:14px Arial, Helvetica, sans-serif;
+	background:#fff;
 	margin:0
 }
+
+#ContactForm [type=time],#prev, #taq  {
+	margin-right: 5%;
+	width:100px;
+
+}
+
+#ContactForm #invitados {
+	width:360px;	
+}
+
+#ContactForm .i_medio {
+	width:360px;	
+}
+
 #ContactForm textarea {
 	overflow: auto;
 	margin:0;
 	width:720px;
-	height:230px;
+	height:5em;
 	background:#fff;
 	padding:7px 10px;
 	color:#474747;

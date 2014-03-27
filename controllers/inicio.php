@@ -2,8 +2,9 @@
 	include('views/home.php');
 	include('models/Evento.php');
 		
-	$event= new Evento();
+	$event = new Evento();
+	$event->getNext();
 	template_header('inicio');
-	template_home(Evento::getLast(), $event->getNext());
+	template_home(Evento::getLast(),$event);
 	template_footer();
 ?>

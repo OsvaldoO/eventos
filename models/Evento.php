@@ -55,13 +55,17 @@ class Evento{
 		return Bd::read($sql);
 	}
 
-	public function save(){
-		if (isset($this->id)){
-			$sql = "UPDATE eventos SET name = ".$this->name.", fecha = ".$this->fecha.", hini = ".$this->hini.", hfin = ".$this->hfin.", tipo = ".$this->tipo.", lugar = ".$this->lugar.", desc = ".$this->desc.", taq = ".$this->taq.", prev = ".$this->prev.",img = ".$this->img." WHERE id=".$this->id;
-		} 
-		else {
-			$sql = "INSERT INTO eventos VALUES (default,".$this->name.",".$this->fecha.",".$this->hini.",".$this->hfin.",".$this->tipo.",".$this->lugar.",".$this->desc.",".$this->taq.",".$this->prev.",".$this->img.")";
+	public function create(){
+		$sql = "INSERT INTO eventos VALUES (default,'".$this->name."','".$this->fecha."','".$this->hini."','".$this->hfin."','".$this->tipo."','".$this->lugar."','".$this->descrip."',".$this->taq.",".$this->prev.",'".$this->img."')";
+		if(Bd::write($sql)){
+			$sql = "SELECT max(id) as id FROM eventos";
+			$evento = BD::read($sql)[0];
+			$this->id = $evento['id'];
 		}
+	}
+
+	public function save(){
+		$sql = "UPDATE eventos SET name = ".$this->name.", fecha = ".$this->fecha.", hini = ".$this->hini.", hfin = ".$this->hfin.", tipo = ".$this->tipo.", lugar = ".$this->lugar.", desc = ".$this->descrip.", taq = ".$this->taq.", prev = ".$this->prev.",img = ".$this->img." WHERE id=".$this->id;
 		return Bd::write($sql);
 	}
 }

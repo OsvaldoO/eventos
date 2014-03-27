@@ -32,10 +32,10 @@ class Bd{
 			return ($res)?$res:NULL;
 		}
 
-		public function write($sql){
-			$this->conectar();
+		public static function write($sql){
+			Bd::conectar();
 			$res = mysql_query( $sql );
-			mysql_close($this->con);
+			mysql_close(Bd::$con);
 			return $res;
 		}
 

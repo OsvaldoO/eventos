@@ -9,7 +9,7 @@
 		}
 
 		public function evento($id){
-			evento_show(new Evento($id));
+			eventos_show(new Evento($id));
 		}
 
 		public function porTipo($tipo){
@@ -18,6 +18,22 @@
 
 		public function pendientes(){
 			eventos_list(Evento::getUncom());
+		}
+
+		public function crear(){
+			$evento = new Evento();
+			if (isset($_POST['name'])){
+				foreach ($_POST as $campo => $value) {
+					$evento->$campo = $value;
+				}
+				$evento->tipo = "otros";
+				$evento->img = "default.jpg";
+				$evento->create();
+				header('Location: '.URL_ROOT.'eventos/'.$evento->id);			
+			}
+			else{
+				eventos_new();	
+			}
 		}
 	}
 
@@ -28,11 +44,18 @@ if(count($ACTION) > 1){
 	if(is_numeric($metodo)){
 		$eventos->evento($metodo);
 	}
-	else if($metodo == 'proximos'){
-		$eventos->pendientes();
-	}
 	else{
-		$eventos->porTipo($metodo);
+		switch ($metodo) {
+			case 'proximos':
+				$eventos->pendientes();
+				break;
+			case 'nuevo':
+				$eventos->crear();
+				break;
+			default:
+				$eventos->porTipo($metodo);
+				break;
+		}
 	}
 }
 else{ 
