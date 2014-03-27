@@ -1,44 +1,30 @@
 <?php
 	include('views/events.php');
-	include('controllers/mysql.php');
+	include('models/Evento.php');
 
 	class Eventos{
 
-		private $bd;
-
-		public function __construct(){
-			$this->bd = new Bd();
-		}
-
 		public function index(){
-			$sql = 'SELECT name,fecha,descripcion,img FROM eventos';
-			$eventos = $this->bd->solicitud($sql);
-			template_header('Eventos');
-			eventos_list($eventos);
+			template_header('eventos');
+			eventos_list(Evento::getAll());
 			template_footer();
 		}
 
 		public function evento($id){
-			$sql = 'SELECT * FROM eventos WHERE id='.$id;
-			$evento = $this->bd->solicitud($sql)[0];
-			template_header('Eventos');
-			evento_show($evento);
+			template_header('eventos');
+			evento_show(new Evento($id));
 			template_footer();
 		}
 
 		public function porTipo($tipo){
-			$sql = "SELECT name,fecha,descripcion,img FROM eventos WHERE tipo='".$tipo."'";
-			$eventos = $this->bd->solicitud($sql);
-			template_header('Eventos');
-			eventos_list($eventos);
+			template_header('eventos');
+			eventos_list(Evento::getType($tipo));
 			template_footer();
 		}
 
 		public function pendientes(){
-			$sql = "SELECT name,fecha,descripcion,img FROM eventos WHERE fecha > NOW()";
-			$eventos = $this->bd->solicitud($sql);
 			template_header('Eventos');
-			eventos_list($eventos);
+			eventos_list(Evento::getUncom());
 			template_footer();
 		}
 	}

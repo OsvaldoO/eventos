@@ -10,21 +10,21 @@ $$title = 'page1';
 <head>
 <title><?php echo $title ?></title>
 <meta charset="utf-8">
-<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<script src="js/jquery-1.6.js" ></script>
-<script src="js/cufon-yui.js"></script>
-<script src="js/cufon-replace.js"></script>
-<script src="js/NewsGoth_BT_400.font.js"></script>
-<script src="js/NewsGoth_BT_700.font.js"></script>
+<link rel="stylesheet" href="<?php echo URL_ROOT?>/css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="<?php echo URL_ROOT?>/css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="<?php echo URL_ROOT?>/css/style.css" type="text/css" media="all">
+<script src="<?php echo URL_ROOT?>/js/jquery-1.6.js" ></script>
+<script src="<?php echo URL_ROOT?>/js/cufon-yui.js"></script>
+<script src="<?php echo URL_ROOT?>/js/cufon-replace.js"></script>
+<script src="<?php echo URL_ROOT?>/js/NewsGoth_BT_400.font.js"></script>
+<script src="<?php echo URL_ROOT?>/js/NewsGoth_BT_700.font.js"></script>
 <?php if(isset($inicio)) { ?>
-<script src="js/script.js"></script>
-<script src="js/jcarousellite.js"></script>
-<script src="js/jquery.easing.1.3.js"></script>
-<script src="js/jquery.mousewheel.js"></script>
+<script src="<?php echo URL_ROOT?>/js/script.js"></script>
+<script src="<?php echo URL_ROOT?>/js/jcarousellite.js"></script>
+<script src="<?php echo URL_ROOT?>/js/jquery.easing.1.3.js"></script>
+<script src="<?php echo URL_ROOT?>/js/jquery.mousewheel.js"></script>
 <?php } ?>
-<script src="js/atooltip.jquery.js"></script>
+<script src="<?php echo URL_ROOT?>/js/atooltip.jquery.js"></script>
 </head>
 <body id="<?php echo $$title; ?>">
 <div class="bg1">
@@ -56,8 +56,8 @@ function template_footer() {
           		3333333333 | micorreo@gmail.com</address></br>
           </div>
          <ul class="right" id="icons">
-                <li><a href="#" class="normaltip"><img src="images/face.png" alt=""></a></li>
-                <li><a href="#" class="normaltip"><img src="images/yout.png" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="<?php echo URL_ROOT?>/images/face.png" alt=""></a></li>
+                <li><a href="#" class="normaltip"><img src="<?php echo URL_ROOT?>/images/yout.png" alt=""></a></li>
           </ul>
                     		<small class="center">Desarollo web <a class="link1" href='https://www.facebook.com/OsvaldOoLeOon'>Oosvaldo LeoOn</a></small>
 

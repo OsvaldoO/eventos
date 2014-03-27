@@ -9,6 +9,7 @@ function eventos_list($eventos){
           <div class="wrapper">
             <div class="cols marg_right1">
               <figure class="pad_bot1"><a href="#"><img src="images/page2_img1.jpg" alt=""></a></figure>
+              <figure><a href="#"><img src="images/page2_img4.jpg" alt=""></a></figure>
             </div>
             <div class="cols marg_right1">
               <figure class="pad_bot1"><a href="#"><img src="images/page2_img3.jpg" alt=""></a></figure>
@@ -16,6 +17,7 @@ function eventos_list($eventos){
             </div>
             <div class="cols">
               <figure class="pad_bot1"><a href="#"><img src="images/page2_img5.jpg" alt=""></a></figure>
+              <figure><a href="#"><img src="images/page2_img4.jpg" alt=""></a></figure>
             </div>
           </div>
         </div>
@@ -26,7 +28,7 @@ function eventos_list($eventos){
 								foreach ($eventos as $evento) {
 									echo $evento['name'];
 									echo $evento['fecha'];
-									echo $evento['descripcion'];
+									echo $evento['descrip'];
 									echo $evento['img'];
 								}
 							}
@@ -39,17 +41,12 @@ function eventos_list($eventos){
 function evento_show($evento){
 ?>
 <!--==============================content================================-->
-<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. November 21, 2011!</div>
-				<div class="main">
-					<div class="content-padding-2">
-						<div class="container_12">
-							<div class="wrapper">
 									<?php
-									if($evento){
-										echo $evento['name'];
-										echo $evento['fecha'];
-										echo $evento['descripcion'];
-										echo $evento['img'];
+									if(isset($evento->id)){
+										echo $evento->name;
+										echo $evento->fecha;
+										echo $evento->descrip;
+										echo $evento->img;
 									}
 									else{
 										echo '<h2>Evento no encontrado</h2>';
