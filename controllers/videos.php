@@ -1,13 +1,8 @@
 <?php 
 include ('views/videos.php');
-include('controllers/mysql.php');
+include_once('models/mysql.php');
 
 class Videos{
-	private $bd;
-
-	public function __construct(){
-		$this->bd = new Bd();
-	}
 
 	public function index(){
 		$sql = "SELECT * FROM videos";

@@ -1,4 +1,5 @@
 <?php
+	include_once('models/mysql.php');
 	include('views/home.php');
 	include('models/Evento.php');
 		

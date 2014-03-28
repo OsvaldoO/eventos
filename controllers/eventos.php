@@ -1,6 +1,8 @@
 <?php
+	include_once('models/mysql.php');
 	include('views/events.php');
 	include('models/Evento.php');
+	include('models/Music.php');
 
 	class Eventos{
 
@@ -20,6 +22,16 @@
 			eventos_list(Evento::getUncom());
 		}
 
+		private function addMusicos($evento){
+			foreach (explode(".",$evento->invitadosd) as $mus) {
+				$musico = new Musico();
+				$musico->name = $mus;
+				$musico->clave = strtolower(str_ireplace(' ','', $mus));
+				$musico->create();
+				$evento->setMusic($musico->clave);
+			}
+		}
+
 		public function crear(){
 			$evento = new Evento();
 			if (isset($_POST['name'])){
@@ -29,7 +41,8 @@
 				$evento->tipo = "otros";
 				$evento->img = "default.jpg";
 				$evento->create();
-				header('Location: '.URL_ROOT.'eventos/'.$evento->id);			
+				$evento->AddMusicos($evento);
+				//header('Location: '.URL_ROOT.'eventos/'.$evento->id);			
 			}
 			else{
 				eventos_new();	

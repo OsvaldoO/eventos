@@ -1,7 +1,5 @@
 <?php
 
-include_once('models/mysql.php');
-
 class Evento{
 
 	function __construct( $id = null ){
@@ -36,7 +34,12 @@ class Evento{
 	}
 
 	public function getMusic(){
-		$sql = "SELECT distinct i.nombre FROM invitados i JOIN evento_invitado ei ON ( ei.id_evento = ".$this->id." )";
+		$sql = "SELECT i.nombre FROM invitados as i, evento_invitado as ei WHERE i.clave = ei.clave_invitado AND ei.id_evento = ".$this->id;
+		return Bd::read($sql);
+	}
+
+	public function setMusic($incitado){
+		$sql = "INSERT INTO evento_invitado VALUES (".$this->id.','.$invitado.")";
 		return Bd::read($sql);
 	}
 

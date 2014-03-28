@@ -35,7 +35,7 @@ function template_home($ultimos, $event){
             <ul class="list1 pad_bot1">
             	<?php foreach ($event->getMusic() as $invitado) {
             		echo '<li><a href="#"></a>'.$invitado['nombre'].'</li>';
-            	} echo $event->name; ?>
+            	} ?>
             </ul>
             <p> <?php echo $event->prev;?> </p>
           </div>

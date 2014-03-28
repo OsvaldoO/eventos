@@ -1,7 +1,5 @@
 <?php
 
-include_once('models/mysql.php');
-
 class Galeria{
 
 	static function getLast(){

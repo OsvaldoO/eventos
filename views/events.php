@@ -55,6 +55,17 @@ function eventos_show($evento){
 <?php 
 }
 
+function eventos_addImg($evento){
+?>
+	<form action="processupload.php" method="post" enctype="multipart/form-data" id="MyUploadForm">
+		<input name="ImageFile" id="imageInput" type="file" />
+		<input type="submit"  id="submit-btn" value="Upload" />
+		<img src="images/ajax-loader.gif" id="loading-img" style="display:none;" alt="Please Wait"/>
+	</form>
+	<div id="output"></div>
+<?php 
+}
+
 function eventos_new(){
 ?>
 	<article id="content">
@@ -68,12 +79,12 @@ function eventos_new(){
             <input name="name" id="name" type="text" class="i_medio" >
           </div>
           <div class="wrapper"> <label for="fecha">Fecha:</label>
-            <input id="fecha" name="fecha" type="date" value="<?php echo date('Y'); ?>-01-01" >
+            <input id="fecha" name="fecha" type="date" value="<?php echo date('Y-m-d'); ?>" >
           </div>
           <div class="wrapper"> <label for="hini">Inicia:</label>
-            <input id="hini" name="hini" type="time" value="00:00" >
+            <input id="hini" name="hini" type="time" value="12:00" >
             <label for="hfin">Finaliza:</label>
-            <input id="hfin" name="hfin" type="time" value="00:00">
+            <input id="hfin" name="hfin" type="time" value="12:00">
           </div>
           <div class="wrapper"> <label for="lugar">Lugar:</label>
             <input name="lugar" id="lugar" type="text" class="i_medio" >
