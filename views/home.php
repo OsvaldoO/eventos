@@ -19,7 +19,7 @@ function template_home($ultimos, $event){
               		echo '<li> <span class="dropcap_1">'.$evento['dia'].'<span>'.$mes[$evento['mes']].'</span></span>';
                   	echo '<p><span class="color1">'.$evento['name'].'</span><br>';
                     echo $evento['descrip'].'</br>';
-                    echo '<a href="#" class="link1 right">Ver detalles</a></p></li>';
+                    echo '<a href="'.URL_ROOT.'eventos/'.$evento['id'].'" class="link1 right">Ver detalles</a></p></li>';
               	}
               	?>
               </ul>
@@ -29,15 +29,19 @@ function template_home($ultimos, $event){
         <div class="wrapper">
           <h2>Proximo Evento</h2>
           <div class="wrapper">
-            <figure class="left marg_right1"><a href="#"><img src="images/<?php echo $event->img;?>" alt=""></a></figure>
+            <figure class="left marg_right1"><a href="#"><img class="fit" src="images/<?php echo $event->img;?>" alt=""></a></figure>
             <h3><?php echo $event->name; ?></h3>
-            <p class="pad_bot1"><?php echo $event->descrip; ?></p>
+            <?php echo $event->fecha;?>
+            <p class="pad_bot1 detalles"><?php echo $event->descrip; ?></p>
+            contamos con la precencia de:
             <ul class="list1 pad_bot1">
             	<?php foreach ($event->getMusic() as $invitado) {
-            		echo '<li><a href="#"></a>'.$invitado['nombre'].'</li>';
+            		echo '<li><a href="'.URL_ROOT.'invitados">'.$invitado['nombre'].'</a></li>';
             	} ?>
             </ul>
-            <p> <?php echo $event->prev;?> </p>
+            <p class="color1"> <?php echo $event->lugar;?></p>
+            <p>Preventa <?php echo $event->prev;?>$ </br>
+            Taquilla <?php echo $event->taq;?>$ </p>
           </div>
         </div>
       </article>

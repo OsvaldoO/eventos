@@ -2,7 +2,7 @@
 function noticia_listar(){
 ?>
  <!--content -->
-      <article id="content">
+   <!--   <article id="content">
         <div class="wrapper">
           <h2><strong>02.09.</strong> Sed ut perspiciatis unde omnis iste natus</h2>
           <div class="wrapper pad_bot1">
@@ -25,7 +25,7 @@ function noticia_listar(){
         </div>
       </article>
       <!--content end-->
-     
+    
 <?php
 }
 ?>

@@ -1,7 +1,7 @@
 <?php 
 function invitado_listar(){
 ?>
-      <article id="content">
+    <!--  <article id="content">
         <div class="wrapper">
           <h2>Night Club Residents</h2>
           <div class="wrapper">
@@ -31,7 +31,7 @@ function invitado_listar(){
             </div>
           </div>
         </div>
-      </article>
+      </article> -->
       <!--content end-->
 <?php
 }

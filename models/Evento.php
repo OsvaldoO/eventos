@@ -24,12 +24,12 @@ class Evento{
 	}
 
 	static function getLast(){
-		$sql = "SELECT name,MONTH(fecha) as mes,DAY(fecha) as dia,descrip FROM eventos WHERE fecha < NOW() LIMIT 5";
+		$sql = "SELECT id, name,MONTH(fecha) as mes,DAY(fecha) as dia,descrip FROM eventos WHERE fecha < NOW() LIMIT 5";
 		return Bd::read($sql);
 	}
 
 	static function getAll(){
-		$sql = 'SELECT name, fecha, descrip, img FROM eventos';
+		$sql = 'SELECT id, name, fecha, descrip, img FROM eventos';
 		return Bd::read($sql);
 	}
 
@@ -44,7 +44,7 @@ class Evento{
 	}
 
 	static function getType($tipo){
-		$sql = "SELECT name,fecha,descrip,img FROM eventos WHERE tipo='".$tipo."'";
+		$sql = "SELECT id, name,fecha,descrip,img FROM eventos WHERE tipo='".$tipo."'";
 		return Bd::read($sql);
 	}
 

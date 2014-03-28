@@ -1,7 +1,7 @@
 <?php
 function imagen_list($imagenes){
 ?>
-      <article id="content">
+      <!-- <article id="content">
         <div class="wrapper">
           <h2>Rnb Party Gallery</h2>
           <dl class="folio">
@@ -25,7 +25,7 @@ function imagen_list($imagenes){
             </dd>
           </dl>
         </div>
-      </article>
+      </article> -->
 							<?php /*
 							if($imagenes){
 								foreach ($imagenes as $imagen) {

@@ -20,7 +20,6 @@ $$title = 'page1';
 <script src="<?php echo URL_ROOT?>/js/NewsGoth_BT_700.font.js"></script>
 <?php if(isset($inicio)) { ?>
 <script src="<?php echo URL_ROOT?>/js/script.js"></script>
-<script src="<?php echo URL_ROOT?>/js/holder.js"></script>
 <script src="<?php echo URL_ROOT?>/js/jcarousellite.js"></script>
 <script src="<?php echo URL_ROOT?>/js/jquery.easing.1.3.js"></script>
 <script src="<?php echo URL_ROOT?>/js/jquery.mousewheel.js"></script>

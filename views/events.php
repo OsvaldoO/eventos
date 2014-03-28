@@ -3,7 +3,7 @@ function eventos_list($eventos){
 ?>
 <!--==============================content================================-->
 <!--content -->
-      <article id="content">
+     <!-- <article id="content">
         <div class="wrapper">
           <h2>Upcoming Parties</h2>
           <div class="wrapper">
@@ -21,19 +21,18 @@ function eventos_list($eventos){
             </div>
           </div>
         </div>
-      </article>
+      </article> -->
       <!--content end-->
-							<?php /*
+							<?php 
 							if($eventos){
 								foreach ($eventos as $evento) {
-									echo $evento['name'];
-									echo $evento['fecha'];
-									echo $evento['descrip'];
-									echo $evento['img'];
+									echo '<a href="'.URL_ROOT.'eventos/'.$evento["id"].'">'.$evento["name"].'</a></br>';
+									echo $evento['fecha'].'</br></br>';
 								}
 							}
 							else echo '<h1>No hay Eventos</h1>';
-							*/ ?>
+					?>
+
 <!--==============================footer=================================-->
 <?php
 }
@@ -43,10 +42,11 @@ function eventos_show($evento){
 <!--==============================content================================-->
 									<?php
 									if(isset($evento->id)){
-										echo $evento->name;
-										echo $evento->fecha;
-										echo $evento->descrip;
-										echo $evento->img;
+										echo $evento->name.'</br>';
+										echo $evento->fecha.'</br>';
+                    echo $evento->lugar.'</br>';
+										echo $evento->descrip.'</br>';
+										echo $evento->prev.'</br>';
 									}
 									else{
 										echo '<h2>Evento no encontrado</h2>';

@@ -6,8 +6,7 @@ function template_contact(){
     <div class="wrapper">
     	<div class="col3">
         	<h2>Comunicate</h2>
-        	<p>Comparte tus comentarios, quejas, sujerencias, dinos que grupos te gustaria encontrar en los eventos, Djs, tipo de musica.</br>
-        		Si tienes algun grupo, eres Dj o realizas algun tipo de espectaculo dejanos conocerte para tenerte en cuenta en futuros eventos</p>
+        	<p class="detalles">Comparte tus comentarios, quejas, sujerencias, dinos que grupos te gustaria encontrar en los eventos, Djs, tipo de musica. Si tienes algun grupo, eres Dj o realizas algun tipo de espectaculo dejanos conocerte para tenerte en cuenta en futuros eventos</p>
       	</div>
       <form id="ContactForm" action="#">
         <div>
