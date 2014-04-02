@@ -14,6 +14,10 @@
 			eventos_show(new Evento($id));
 		}
 
+		public function setImg($metodo){
+			evento_setImg($metodo);
+		}
+
 		public function porTipo($tipo){
 			eventos_list(Evento::getType($tipo));
 		}
@@ -55,7 +59,10 @@ template_header('eventos');
 if(count($ACTION) > 1){
 	$metodo = $ACTION[1];
 	if(is_numeric($metodo)){
-		$eventos->evento($metodo);
+		if(isset($ACTION[2]))
+			$eventos->setImg($metodo);
+		else
+			$eventos->evento($metodo);
 	}
 	else{
 		switch ($metodo) {

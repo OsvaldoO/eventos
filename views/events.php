@@ -55,14 +55,13 @@ function eventos_show($evento){
 <?php 
 }
 
-function eventos_addImg($evento){
+function evento_setImg($evento){
 ?>
-	<form action="processupload.php" method="post" enctype="multipart/form-data" id="MyUploadForm">
-		<input name="ImageFile" id="imageInput" type="file" />
-		<input type="submit"  id="submit-btn" value="Upload" />
-		<img src="images/ajax-loader.gif" id="loading-img" style="display:none;" alt="Please Wait"/>
-	</form>
-	<div id="output"></div>
+<form action="<?php echo URL_ROOT?>img" method="POST" enctype="multipart/form-data">
+  <label for="imagen">Imagen:</label>
+  <input type="file" name="imagen" id="imagen" />
+  <input type="submit" name="subir" value="Subir"/>
+</form>
 <?php 
 }
 

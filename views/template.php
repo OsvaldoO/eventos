@@ -41,7 +41,7 @@ $$title = 'page1';
           <li class="<?php echo (isset($contacto))?'active':'';?>"><a href="<?php echo URL_ROOT?>contacto">Contacto</a></li>
         </ul>
       </nav>
-      <h1><a href="index.html" id="logo">nightclub feel the rhythm</a></h1>
+      <h1><a href="<?php echo URL_ROOT?>" id="logo">nightclub feel the rhythm</a></h1>
     </header>
       <!--header end-->
     <div class="box">
