@@ -1,5 +1,5 @@
 <?php
-function test($var){
+function test($var=null){
   var_dump($var);
 }
 ?>

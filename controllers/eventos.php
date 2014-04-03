@@ -14,10 +14,6 @@
 			eventos_show(new Evento($id));
 		}
 
-		public function setImg($metodo){
-			evento_setImg($metodo);
-		}
-
 		public function porTipo($tipo){
 			eventos_list(Evento::getType($tipo));
 		}
@@ -27,29 +23,45 @@
 		}
 
 		private function addMusicos($evento){
-			foreach (explode(".",$evento->invitadosd) as $mus) {
-				$musico = new Musico();
-				$musico->name = $mus;
-				$musico->clave = strtolower(str_ireplace(' ','', $mus));
-				$musico->create();
-				$evento->setMusic($musico->clave);
+			foreach (explode("\n",$evento->invitados) as $mus) {
+				if(strlen(trim($mus)) > 1){
+					$musico = new Musico();
+					$musico->nombre = $mus;
+					$musico->clave = strtolower(trim(str_ireplace(array(' ','-','_','(',')'),'', $mus)));
+					if(!Musico::exist($musico->clave)){
+						$musico->create();
+					}
+					$evento->setMusic($musico->clave);
+				}
 			}
 		}
 
-		public function crear(){
+		public function crear($evento){
+
+		}
+
+		public function editar($evento){
+
+		}
+
+		public function guardar(){
 			$evento = new Evento();
-			if (isset($_POST['name'])){
-				foreach ($_POST as $campo => $value) {
+			if (isset($_POST['id'])){
+			foreach ($_POST as $campo => $value) {
 					$evento->$campo = $value;
 				}
-				$evento->tipo = "otros";
-				$evento->img = "default.jpg";
-				$evento->create();
-				$evento->AddMusicos($evento);
-				//header('Location: '.URL_ROOT.'eventos/'.$evento->id);			
-			}
-			else{
-				eventos_new();	
+			$evento->tipo = "otros";
+			$evento->img = "default.jpg";
+				if($evento->id == ''){
+					$evento->create();
+					mkdir("/var/www/eventos/images/events/".$evento->id, 0777);
+				}
+				else {
+					$evento->update();
+					$evento->dropMusics();
+				}
+				$this->AddMusicos($evento);
+				header('Location: '.URL_ROOT.'eventos/'.$evento->id);			
 			}
 		}
 	}
@@ -59,8 +71,19 @@ template_header('eventos');
 if(count($ACTION) > 1){
 	$metodo = $ACTION[1];
 	if(is_numeric($metodo)){
-		if(isset($ACTION[2]))
-			$eventos->setImg($metodo);
+		if(isset($ACTION[2])){
+			switch ($ACTION[2]) {
+			case 'img':
+				evento_setImg($metodo);
+				break;
+			case 'editar':
+				eventos_new(new Evento($metodo));
+				break;
+			default:
+				die404();
+				break;
+			}	
+		}
 		else
 			$eventos->evento($metodo);
 	}
@@ -70,7 +93,10 @@ if(count($ACTION) > 1){
 				$eventos->pendientes();
 				break;
 			case 'nuevo':
-				$eventos->crear();
+				eventos_new();
+				break;
+			case 'guardar':
+				$eventos->guardar();
 				break;
 			default:
 				$eventos->porTipo($metodo);

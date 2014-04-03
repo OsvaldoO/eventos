@@ -17,7 +17,6 @@ if ($_FILES["imagen"]["error"] > 0){
     //pero si quieren pueden obviar esto si no es necesario.
     //o pueden darle otro nombre para que no sobreescriba el actual.
     if (!file_exists($ruta)){
-    	var_dump($ruta);
       //aqui movemos el archivo desde la ruta temporal a nuestra ruta
       //usamos la variable $resultado para almacenar el resultado del proceso de mover el archivo
       //almacenara true o false

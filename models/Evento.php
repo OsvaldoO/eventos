@@ -38,9 +38,14 @@ class Evento{
 		return Bd::read($sql);
 	}
 
-	public function setMusic($incitado){
-		$sql = "INSERT INTO evento_invitado VALUES (".$this->id.','.$invitado.")";
-		return Bd::read($sql);
+	public function setMusic($invitado){
+		$sql = "INSERT INTO evento_invitado VALUES (".$this->id.",'".$invitado."')";
+		return Bd::write($sql);
+	}
+
+	public function dropMusics(){
+		$sql = "DELETE FROM evento_invitado WHERE id_evento =".$this->id;
+		return Bd::write($sql);
 	}
 
 	static function getType($tipo){
@@ -67,7 +72,7 @@ class Evento{
 		}
 	}
 
-	public function save(){
+	public function update(){
 		$sql = "UPDATE eventos SET name = ".$this->name.", fecha = ".$this->fecha.", hini = ".$this->hini.", hfin = ".$this->hfin.", tipo = ".$this->tipo.", lugar = ".$this->lugar.", desc = ".$this->descrip.", taq = ".$this->taq.", prev = ".$this->prev.",img = ".$this->img." WHERE id=".$this->id;
 		return Bd::write($sql);
 	}

@@ -16,6 +16,14 @@ class Musico{
 		return Bd::write($sql);
 	}
 
+	static function exist($clave){
+		$sql = "SELECT EXISTS(SELECT 1 FROM invitados WHERE clave ='".$clave."' LIMIT 1) as e";
+		if( BD::read($sql)[0]['e'] == 1){
+			return true;
+		}
+		return false;
+	}
+
 	static function getAll(){
 		$sql = "SELECT * FROM invitados";
 		return Bd::read($sql);

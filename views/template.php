@@ -77,10 +77,6 @@ function template_footer() {
 } // template_footer
 
 function die404() {
-
-	header('HTTP/1.1 404 Not Found');
-	template_header('HTTP/1.1 404 Not Found');
-	
 	echo '
 		<h2>Unable to find requested file</h2>
 		<p>
@@ -90,9 +86,6 @@ function die404() {
 			Please access the <a href="',URL_ROOT,'">main page of this site</a> instead.
 		</p>
 	';
-	
-	template_footer();
-	
 } // die404
 
 ?>
