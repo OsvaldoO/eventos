@@ -35,7 +35,13 @@ class Evento{
 
 	public function getMusic(){
 		$sql = "SELECT i.nombre FROM invitados as i, evento_invitado as ei WHERE i.clave = ei.clave_invitado AND ei.id_evento = ".$this->id;
-		return Bd::read($sql);
+		$res = Bd::read($sql);
+		return ($res)?$res:array();
+	}
+
+	public function hasMusic(){
+		$sql = "INSERT INTO evento_invitado VALUES (".$this->id.",'".$invitado."')";
+		return Bd::write($sql);
 	}
 
 	public function setMusic($invitado){
@@ -73,7 +79,7 @@ class Evento{
 	}
 
 	public function update(){
-		$sql = "UPDATE eventos SET name = ".$this->name.", fecha = ".$this->fecha.", hini = ".$this->hini.", hfin = ".$this->hfin.", tipo = ".$this->tipo.", lugar = ".$this->lugar.", desc = ".$this->descrip.", taq = ".$this->taq.", prev = ".$this->prev.",img = ".$this->img." WHERE id=".$this->id;
+		$sql = "UPDATE eventos SET name = '".$this->name."', fecha = '".$this->fecha."', hini = '".$this->hini."', hfin = '".$this->hfin."', tipo = '".$this->tipo."', lugar = '".$this->lugar."', descrip = '".$this->descrip."', taq = ".$this->taq.", prev = ".$this->prev.",img = '".$this->img."' WHERE id=".$this->id;
 		return Bd::write($sql);
 	}
 }

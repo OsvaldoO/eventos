@@ -28,7 +28,7 @@ function eventos_list($eventos){
 							if($eventos){
 								foreach ($eventos as $evento) {
 									echo '<a href="'.URL_ROOT.'eventos/'.$evento["id"].'">'.$evento["name"].'</a></br>';
-									echo $evento['fecha'].'</br></br>';
+									echo $evento['fecha'].'<br/><br/>';
 								}
 							}
 							else echo '<h1>No hay Eventos</h1>';
@@ -43,11 +43,13 @@ function eventos_show($evento){
 <!--==============================content================================-->
 									<?php
 									if(isset($evento->id)){
-										echo $evento->name.'</br>';
-										echo $evento->fecha.'</br>';
-                    echo $evento->lugar.'</br>';
-										echo $evento->descrip.'</br>';
-										echo $evento->prev.'</br>';
+										echo $evento->name.'<br/>';
+										echo $evento->fecha.'<br/>';
+                    echo $evento->lugar.'<br/>';
+										echo $evento->descrip.'<br/>';
+										echo $evento->prev.'<br/>';
+                    echo '<a href="'.URL_ROOT.'eventos/'.$evento->id.'/editar">Editar</a><br/>';
+
 									}
 									else{
 										echo '<h2>Evento no encontrado</h2>';
@@ -71,7 +73,7 @@ function eventos_new($evento = null){
 	<article id="content">
     <div class="wrapper">
     	<div class="col3">
-        	<h2>Nuevo Evento</h2>
+        	<h2><?php echo ($evento)?'Editar Evento':'Nuevo Evento';?></h2>
       	</div>
       <form id="ContactForm" method="post" action="<?php echo URL_ROOT?>eventos/guardar">
         <div>
@@ -91,9 +93,9 @@ function eventos_new($evento = null){
             <input name="lugar" id="lugar" type="text" value="<?php echo ($evento)?$evento->lugar:'';?>" class="i_medio" >
           </div>
           <div class="textarea_box"> <label for="invitados">Invitados:</label>
-            <textarea name="invitados" id="invitados" cols="1" rows="1"><?php foreach ($evento->getMusic() as $invitado) {
+            <textarea name="invitados" id="invitados" cols="1" rows="1"><?php if($evento){foreach ($evento->getMusic() as $invitado) {
               echo $invitado['nombre']."\n";
-              } ?></textarea>
+              }} ?></textarea>
           </div>
           <div class="wrapper"> <label for="prev">Preventa:</label>
             <input id="prev" name="prev" type="text" value="<?php echo ($evento)?$evento->prev:'';?>">

@@ -36,32 +36,24 @@
 			}
 		}
 
-		public function crear($evento){
-
-		}
-
-		public function editar($evento){
-
-		}
-
 		public function guardar(){
 			$evento = new Evento();
 			if (isset($_POST['id'])){
 			foreach ($_POST as $campo => $value) {
-					$evento->$campo = $value;
-				}
+				$evento->$campo = $value;
+			}
 			$evento->tipo = "otros";
 			$evento->img = "default.jpg";
-				if($evento->id == ''){
-					$evento->create();
-					mkdir("/var/www/eventos/images/events/".$evento->id, 0777);
-				}
-				else {
-					$evento->update();
-					$evento->dropMusics();
-				}
-				$this->AddMusicos($evento);
-				header('Location: '.URL_ROOT.'eventos/'.$evento->id);			
+			if($evento->id == ''){
+				$evento->create();
+				mkdir("/var/www/eventos/images/events/".$evento->id, 0777);
+			}
+			else {
+				$evento->update();
+				$evento->dropMusics();
+			}
+			$this->AddMusicos($evento);
+			header('Location: '.URL_ROOT.'eventos/'.$evento->id);			
 			}
 		}
 	}
